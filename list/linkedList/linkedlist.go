@@ -7,12 +7,12 @@ type node struct {
 }
 
 // represent
-type linkedlist struct {
+type LinkedList struct {
 	head *node
 }
 
 // InsertAfter insert element after the specified key
-func (l *linkedlist) InsertAfter(key any, element any) {
+func (l *LinkedList) InsertAfter(key any, element any) {
 	// return if data is null
 	if element == nil {
 		return
@@ -38,7 +38,7 @@ func (l *linkedlist) InsertAfter(key any, element any) {
 }
 
 // InsertBefore insert element before the specified key
-func (l *linkedlist) InsertBefore(key any, element any) {
+func (l *LinkedList) InsertBefore(key any, element any) {
 	// return if data is null
 	if element == nil {
 		return
@@ -68,7 +68,7 @@ func (l *linkedlist) InsertBefore(key any, element any) {
 }
 
 // Remove an element from the list
-func (l *linkedlist) Remove(element any) {
+func (l *LinkedList) Remove(element any) {
 	// return if list or element is nil
 	if l.head == nil {
 		return
@@ -91,7 +91,7 @@ func (l *linkedlist) Remove(element any) {
 }
 
 // Get an element from list
-func (l *linkedlist) Get(element any) any {
+func (l *LinkedList) Get(element any) any {
 	// return if list or element is nil
 	if l.head == nil {
 		return nil
@@ -110,7 +110,7 @@ func (l *linkedlist) Get(element any) any {
 }
 
 // AddFirst adds a node to the beginning of a list
-func (l *linkedlist) AddFirst(element any) {
+func (l *LinkedList) AddFirst(element any) {
 	// return if data is null
 	if element == nil {
 		return
@@ -124,7 +124,7 @@ func (l *linkedlist) AddFirst(element any) {
 }
 
 // AddLast adds a node to the end of a list
-func (l *linkedlist) AddLast(element any) {
+func (l *LinkedList) AddLast(element any) {
 	// return if data is null
 	if element == nil {
 		return
@@ -145,7 +145,7 @@ func (l *linkedlist) AddLast(element any) {
 }
 
 // returns list as an array
-func (l *linkedlist) toArray() []any {
+func (l *LinkedList) ToArray() []any {
 	if l.head == nil {
 		return nil
 	}

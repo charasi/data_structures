@@ -7,14 +7,14 @@ import (
 )
 
 type ll struct {
-	list linkedListInterface
+	list LinkedListInterface
 }
 
 var list ll
 
 func TestMain(m *testing.M) {
 	list = ll{
-		list: &linkedlist{},
+		list: &LinkedList{},
 	}
 	log.Println("Do stuff BEFORE the tests!")
 	exitVal := m.Run()
@@ -36,7 +36,7 @@ func TestLinkedlist_AddFirst(t *testing.T) {
 func TestLinkedlist_AddLast(t *testing.T) {
 	list.list.AddLast(6)
 	list.list.AddLast(7)
-	a := list.list.toArray()
+	a := list.list.ToArray()
 	arr := []int{6, 7}
 	for i := 0; i < len(arr); i++ {
 		if arr[i] != a[i] {
